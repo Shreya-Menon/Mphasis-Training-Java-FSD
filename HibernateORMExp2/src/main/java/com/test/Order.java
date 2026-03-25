@@ -4,19 +4,27 @@ import jakarta.persistence.Table;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.NamedQueries;
+import jakarta.persistence.NamedQuery;
+
 @Entity
 @Table(name="orders")
+@NamedQueries({
+	@NamedQuery(name="customquery",query="from Order o where o_name=:name "),
+	@NamedQuery(name="pricequery",query="from Order o where o_price=:price ")
+})
 public class Order {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
-	public Order() {
-		
-	}
+	
 	public Order(String o_name,int o_quantity,int o_price) {
 		this.o_name=o_name;
 		this.o_quantity=o_quantity;
 		this.o_price=o_price;
+	}
+	public Order() {
+		// TODO Auto-generated constructor stub
 	}
 	public int getId() {
 		return id;

@@ -8,12 +8,12 @@ public class OrderDemo {
 		// TODO Auto-generated method stub
 		OrderDao odao=new OrderDao();
 		Order obj=new Order();
-		obj.setId(2);
-		obj.setO_name("electronics");
+		//obj.setId(2);
+		obj.setO_name("plane");
 		obj.setO_quantity(3);
 		obj.setO_price(140);
 		//odao.saveOrder(obj);
-		//odao.updateOrder(obj);
+		odao.updateOrder(obj);
 		//odao.deleteOrder(obj);
 		List<Order> list=odao.listAllOrders();
 		list.forEach(dt->System.out.println(dt.getId()+" "+dt.getO_name()+" "+dt.getO_quantity()+" "+dt.getO_price()));
