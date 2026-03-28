@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+	xmlns:aop="http://www.springframework.org/schema/aop"
+
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
+
+	<bean id="emp" class="com.test.Employee">
+	<property name="id" value="201"></property>
+	<property name="name" value="r"></property>
+	<property name="company" value="g"></property>
+	
+	</bean>
+	<bean id="emp1" class="com.test.Employee">
+	<constructor-arg name="id" value="111"></constructor-arg>
+	<constructor-arg name="name" value="s"></constructor-arg>
+	<constructor-arg name="company" value="eii"></constructor-arg>
+	</bean>
+</beans>
+
+
