@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>landing </title>
+</head>
+<body>
+<h1>welcome to spring mvc</h1>
+<a href="home">home</a><br><br>
+<a href="userform">user form</a>
+</body>
+</html>
